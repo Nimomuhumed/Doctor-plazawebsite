@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garissa Doctors Plaza - Premier hospital in Garissa, Kenya providing comprehensive healthcare services with experienced doctors and modern facilities.">
+    <meta name="keywords" content="hospital in Garissa, healthcare Kenya, doctors Garissa, medical services, appointment booking">
+    <title>Garissa Doctors Plaza - Premier Hospital in Garissa, Kenya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-hospital-alt"></i>
+                <div>
+                    <h1>Garissa Doctors Plaza</h1>
+                    <p>Quality Healthcare in Garissa</p>
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="doctor.html">Our Doctors</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html" class="admin-btn">Admin</a></li>
+                </ul>
+                
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h2>Your Health is Our Priority</h2>
+                <p>Compassionate and comprehensive healthcare services for the families of Garissa, Kenya.</p>
+                <a href="#appointment" class="btn">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Garissa Doctors Plaza</h2>
+                <p>Committed to serving the community of Garissa</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Garissa Doctors Plaza, we believe that healthcare is a community right. Established with the mission to serve the people of Garissa, our hospital offers a range of outpatient services designed to meet the diverse needs of our patients.</p>
+                    <p>Our compassionate staff is committed to providing personalized care, ensuring that every patient feels valued and understood. We are proud to be part of the Garissa community and strive to build lasting relationships with our patients and their families.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Patients Served</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Medical Professionals</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Emergency Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Garissa Doctors Plaza Hospital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Healthcare Services</h2>
+                <p>Comprehensive medical care for you and your family</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Outpatient Services</h3>
+                    <p>Our outpatient department handles various health concerns with timely and effective care without hospitalization.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Medical Consultations</h3>
+                    <p>Experienced doctors provide consultations, diagnoses, and personalized treatment plans tailored to your needs.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Laboratory Services</h3>
+                    <p>Comprehensive lab services including blood tests and diagnostic screenings with quick turnaround times.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmacy Services</h3>
+                    <p>In-house pharmacy stocked with medications. Pharmacists provide guidance and answer questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+<section id="appointment" class="section appointment">
+    <div class="container">
+        <div class="section-header">
+            <h2>Book Your Appointment</h2>
+            <p>Submit your appointment request directly to our hospital</p>
+        </div>
+        
+        <div class="appointment-form">
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email (optional)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="doctor">Preferred Doctor</label>
+                    <select id="doctor">
+                        <option value="">Any Available Doctor</option>
+                        <option value="Dr. Abdiaziz">Dr. Abdiaziz (Medical Officer)</option>
+                        <option value="Dr. Harran">Dr. Harran (Dermatologist)</option>
+                        <option value="Dr. Kiski">Dr. Kiski (Pediatrician)</option>
+                        <option value="Dr. Amina">Dr. Amina (Gynecologist)</option>
+                        <option value="Dr. Ajabo">Dr. Ajabo (Gynecologist)</option>
+                        <option value="Dr. Issa">Dr. Issa (Urologist)</option>
+                        <option value="Dr. Abdikadir">Dr. Abdikadir (Radiologist)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" required>
+                        <option value="">Choose a service</option>
+                        <option value="General Consultation">General Consultation</option>
+                        <option value="Laboratory Test">Laboratory Test</option>
+                        <option value="Pharmacy">Pharmacy Consultation</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Follow-up Visit">Follow-up Visit</option>
+                        <option value="Scan/Imaging">Scan/Imaging</option>
+                        <option value="Specialist Consultation">Specialist Consultation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <select id="time" required>
+                        <option value="">Select time</option>
+                        <option value="Morning (8am-12pm)">Morning (8am-12pm)</option>
+                        <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
+                        <option value="Evening (4pm-8pm)">Evening (4pm-8pm)</option>
+                        <option value="Emergency (Any Time)">Emergency (Any Time)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="symptoms">Symptoms / Reason for Visit</label>
+                    <textarea id="symptoms" rows="3" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" rows="2" placeholder="Any special requirements or additional information"></textarea>
+                </div>
+                
+                <div class="form-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Your appointment request will be sent directly to our hospital admin. We will contact you within 24 hours to confirm your appointment.</p>
+                </div>
+                
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+                
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Submit Appointment Request
+                </button>
+            </form>
+            
+            <div class="appointment-info">
+                <h3><i class="fas fa-clock"></i> Working Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 8:00 AM - 8:00 PM</li>
+                    <li>Saturday: 9:00 AM - 6:00 PM</li>
+                    <li>Sunday: 10:00 AM - 4:00 PM</li>
+                    <li>Emergency: 24/7</li>
+                </ul>
+                
+                <h3><i class="fas fa-phone"></i> Direct Contact</h3>
+                <p>Call us directly: <strong>+254 796 786 279</strong></p>
+                <p>Email: <strong>appointments@garissadoctorsplaza.co.ke</strong></p>
+                
+                <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                <p>Garissa Town, Near County Headquarters<br>Garissa, Kenya</p>
+                
+                <div class="appointment-status">
+                    <h3><i class="fas fa-history"></i> Appointment Status</h3>
+                    <p>After submitting your request, you can:</p>
+                    <ul>
+                        <li>Check status by calling reception</li>
+                        <li>Receive confirmation via SMS/Phone</li>
+                        <li>Modify or cancel by calling us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Patient Testimonials</h2>
+                <p>What our patients say about us</p>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Ahmed Hassan</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The doctors at Garissa Doctors Plaza are very professional and caring. The WhatsApp booking system makes it so convenient to schedule appointments."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Fatuma Abdi</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The laboratory services are fast and accurate. I got my test results the same day. Highly recommend this hospital to everyone in Garissa."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Mohamed Ali</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Excellent emergency services. The staff responded quickly when I brought my child in the middle of the night. Very grateful for their care."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with Garissa Doctors Plaza</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Garissa Town, Near County Headquarters<br>Garissa, Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>+254 796 786 279</p>
+                            <p>Emergency: +254 711 234 567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@garissadoctorsplaza.co.ke</p>
+                            <p>appointments@garissadoctorsplaza.co.ke</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>+254 796 786 279</p>
+                            <p>Click "Book via WhatsApp" above to schedule appointments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <div class="map-container">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.862459901461!2d39.64643257501244!3d-0.4535412352285464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18400be2d945f357%3A0x4374f6a58b0a8f43!2sGarissa%2C%20Kenya!5e0!3m2!1sen!2ske!4v1690896789017!5m2!1sen!2ske" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Garissa Doctors Plaza Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-hospital-alt"></i>
+                        <div>
+                            <h3>Garissa Doctors Plaza</h3>
+                            <p>Quality Healthcare in Garissa</p>
+                        </div>
+                    </div>
+                    <p>Compassionate and comprehensive healthcare services for the families of Garissa, Kenya.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254796786279"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Outpatient Services</a></li>
+                        <li><a href="#services">Medical Consultations</a></li>
+                        <li><a href="#services">Laboratory Services</a></li>
+                        <li><a href="#services">Pharmacy Services</a></li>
+                        <li><a href="#services">Emergency Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Garissa Town, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254 796 786 279</li>
+                        <li><i class="fas fa-envelope"></i> info@garissadoctorsplaza.co.ke</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-8pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Garissa Doctors Plaza. All rights reserved.</p>
+                <p>Designed to serve the community of Garissa, Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

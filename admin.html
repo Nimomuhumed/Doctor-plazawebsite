@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garissa Doctors Plaza - Admin Dashboard">
+    <title>Admin Dashboard - Garissa Doctors Plaza</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-logo">
+                <i class="fas fa-hospital-alt"></i>
+                <div>
+                    <h1>Garissa Doctors Plaza</h1>
+                    <p>Administration Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul class="admin-nav-list">
+                    <li><a href="../index.html" class="back-to-site">
+                        <i class="fas fa-arrow-left"></i> Back to Site
+                    </a></li>
+                    <li class="admin-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin User</span>
+                        <div class="admin-dropdown">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="admin-mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fas fa-tachometer-alt"></i> Dashboard</h3>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="#appointments">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Appointments</span>
+                    <span class="badge">47</span>
+                </a>
+            </li>
+            <li>
+                <a href="#patients">
+                    <i class="fas fa-users"></i>
+                    <span>Patients</span>
+                    <span class="badge">128</span>
+                </a>
+            </li>
+            <li>
+                <a href="#doctors">
+                    <i class="fas fa-user-md"></i>
+                    <span>Doctors</span>
+                    <span class="badge">15</span>
+                </a>
+            </li>
+            <li>
+                <a href="#services">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Services</span>
+                </a>
+            </li>
+            <li>
+                <a href="#pharmacy">
+                    <i class="fas fa-pills"></i>
+                    <span>Pharmacy</span>
+                    <span class="badge warning">12%</span>
+                </a>
+            </li>
+            <li>
+                <a href="#reports">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="system-status">
+                <h4>System Status</h4>
+                <div class="status-indicator online">
+                    <i class="fas fa-circle"></i> Online
+                </div>
+                <p>Last updated: Just now</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Admin Content -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h2>Welcome back, Administrator</h2>
+                <p>Here's what's happening with your hospital today.</p>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> New Appointment
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Export Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon primary">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>47</h3>
+                        <p>Today's Appointments</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12% from yesterday
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>128</h3>
+                        <p>Active Patients</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% this week
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card">
+                        <div class="stat-icon warning">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>Pending Approvals</p>
+                            <span class="stat-change negative">
+                                <i class="fas fa-arrow-down"></i> 2 from yesterday
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon danger">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Emergency Cases</p>
+                        <span class="stat-change neutral">
+                            Same as yesterday
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Appointments Table -->
+            <div class="card">
+                <div class="card-header">
+                    <h3><i class="fas fa-list"></i> Recent Appointments</h3>
+                    <div class="card-actions">
+                        <button class="btn-small"><i class="fas fa-filter"></i> Filter</button>
+                        <button class="btn-small"><i class="fas fa-sync"></i> Refresh</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Phone</th>
+                                    <th>Service</th>
+                                    <th>Date & Time</th>
+                                    <th>Doctor</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#00123</td>
+                                    <td>
+                                        <div class="patient-info">
+                                            <div class="patient-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Ahmed Hassan</strong>
+                                                <small>ID: P-12345</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>+254712345678</td>
+                                    <td>General Consultation</td>
+                                    <td>
+                                        <div>Dec 15, 2023</div>
+                                        <small>10:00 AM</small>
+                                    </td>
+                                    <td>Dr. Ahmed Mohamed</td>
+                                    <td>
+                                        <span class="status-badge confirmed">Confirmed</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="action-btn view" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="action-btn edit" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn delete" title="Cancel">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>#00124</td>
+                                    <td>
+                                        <div class="patient-info">
+                                            <div class="patient-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Fatuma Abdi</strong>
+                                                <small>ID: P-12346</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>+254723456789</td>
+                                    <td>Laboratory Test</td>
+                                    <td>
+                                        <div>Dec 15, 2023</div>
+                                        <small>11:30 AM</small>
+                                    </td>
+                                    <td>Dr. Samuel Kiptoo</td>
+                                    <td>
+                                        <span class="status-badge pending">Pending</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="action-btn view" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="action-btn edit" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn confirm" title="Confirm">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>#00125</td>
+                                    <td>
+                                        <div class="patient-info">
+                                            <div class="patient-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Mohamed Ali</strong>
+                                                <small>ID: P-12347</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>+254734567890</td>
+                                    <td>Pediatric Consultation</td>
+                                    <td>
+                                        <div>Dec 15, 2023</div>
+                                        <small>2:00 PM</small>
+                                    </td>
+                                    <td>Dr. Fatuma Hassan</td>
+                                    <td>
+                                        <span class="status-badge confirmed">Confirmed</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="action-btn view" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="action-btn edit" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn delete" title="Cancel">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>#00126</td>
+                                    <td>
+                                        <div class="patient-info">
+                                            <div class="patient-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong>James Ochieng</strong>
+                                                <small>ID: P-12348</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>+254745678901</td>
+                                    <td>Dermatology</td>
+                                    <td>
+                                        <div>Dec 16, 2023</div>
+                                        <small>9:00 AM</small>
+                                    </td>
+                                    <td>Dr. Halima Abdi</td>
+                                    <td>
+                                        <span class="status-badge pending">Pending</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="action-btn view" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="action-btn edit" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn confirm" title="Confirm">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>#00127</td>
+                                    <td>
+                                        <div class="patient-info">
+                                            <div class="patient-avatar">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Aisha Mohamed</strong>
+                                                <small>ID: P-12349</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>+254756789012</td>
+                                    <td>Gynecology</td>
+                                    <td>
+                                        <div>Dec 16, 2023</div>
+                                        <small>10:30 AM</small>
+                                    </td>
+                                    <td>Dr. Aisha Abdullahi</td>
+                                    <td>
+                                        <span class="status-badge cancelled">Cancelled</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="action-btn view" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="action-btn edit" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn restore" title="Restore">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#appointments" class="view-all-link">
+                        View all appointments <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Stats & Charts Section -->
+            <div class="grid-columns">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-pie"></i> Service Distribution</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            <div class="chart-visual">
+                                <div class="pie-chart">
+                                    <div class="slice consultation" style="--percentage: 40%;">
+                                        <span>Consultations</span>
+                                    </div>
+                                    <div class="slice lab" style="--percentage: 25%;">
+                                        <span>Lab Tests</span>
+                                    </div>
+                                    <div class="slice pharmacy" style="--percentage: 20%;">
+                                        <span>Pharmacy</span>
+                                    </div>
+                                    <div class="slice emergency" style="--percentage: 15%;">
+                                        <span>Emergency</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color consultation"></span>
+                                    <span>Consultations (40%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color lab"></span>
+                                    <span>Lab Tests (25%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color pharmacy"></span>
+                                    <span>Pharmacy (20%)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color emergency"></span>
+                                    <span>Emergency (15%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bell"></i> Recent Notifications</h3>
+                        <span class="badge">3 new</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="notifications-list">
+                            <div class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p><strong>New appointment booked</strong></p>
+                                    <p>Mohamed Ali booked a pediatric consultation</p>
+                                    <small>10 minutes ago</small>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-pills"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p><strong>Low stock alert</strong></p>
+                                    <p>Paracetamol stock below 20%</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p><strong>Doctor availability</strong></p>
+                                    <p>Dr. Ahmed will be late tomorrow</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-file-invoice-dollar"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p><strong>Payment received</strong></p>
+                                    <p>Payment of KES 2,500 received from Fatuma Abdi</p>
+                                    <small>3 hours ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Admin Footer -->
+    <footer class="admin-footer">
+        <div class="container">
+            <p>&copy; 2023 Garissa Doctors Plaza - Admin Dashboard v1.0</p>
+            <p>Last sync: <span id="currentTime">Loading...</span> | <span class="status-indicator online"><i class="fas fa-circle"></i> System Online</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="admin-script.js"></script>
+</body>
+</html>
